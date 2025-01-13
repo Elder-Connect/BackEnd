@@ -26,10 +26,10 @@ public class Mensagem implements Serializable {
     @Column(name = "date_time")
     private LocalDateTime dataHora;
 
-    @ManyToOne @JoinColumn(name = "recipient_id")
+    @ManyToOne(cascade = CascadeType.ALL) @JoinColumn(name = "recipient_id")
     private Usuario destinatario;
 
-    @ManyToOne @JoinColumn(name = "sender_id")
+    @ManyToOne(cascade = CascadeType.ALL) @JoinColumn(name = "sender_id")
     private Usuario remetente;
 
     @OneToOne(mappedBy = "mensagem", fetch = FetchType.LAZY)

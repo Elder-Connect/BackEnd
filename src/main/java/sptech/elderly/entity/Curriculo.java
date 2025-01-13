@@ -24,7 +24,7 @@ public class Curriculo implements Serializable {
     @Column(name = "co_resume")
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL) @JoinColumn(name = "user_id")
+    @ManyToOne @JoinColumn(name = "user_id")
     private Usuario usuario;
 
     @ManyToOne @JoinColumn(name = "specialtie_id")

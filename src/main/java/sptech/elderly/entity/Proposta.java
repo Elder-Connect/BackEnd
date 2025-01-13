@@ -36,6 +36,6 @@ public class Proposta implements Serializable {
     @Column(name = "accepted")
     private Boolean aceita;
 
-    @OneToOne @JoinColumn(name = "message_id")
+    @OneToOne(cascade = CascadeType.ALL) @JoinColumn(name = "message_id")
     private Mensagem mensagem;
 }
